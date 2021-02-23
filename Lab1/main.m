@@ -66,8 +66,7 @@ int main(int argc, const char * argv[]) {
                     NSLog(@"%@", newString);
                 } else if ([option isEqualToString:@"7"]) {
                     // 7. Word Count
-                    int count = (int)strInput.length;
-                    NSLog(@"%d", count);
+                    NSLog(@"%lu", (unsigned long)[[strInput componentsSeparatedByString:@" "] count]);
                 } else if ([option isEqualToString:@"8"]) {
                     // 8. Remove Punctuations
                     NSString* pureCharactors = [[strInput componentsSeparatedByCharactersInSet:[[NSCharacterSet letterCharacterSet] invertedSet]] componentsJoinedByString:@""];
